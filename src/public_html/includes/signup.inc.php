@@ -51,14 +51,5 @@ if (empty($_POST["name"])) {
     mail($to,$subject,$txt);
     $send;
 
- //header("Location:../index.php");
 
- function valid_email($str) {
-    return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
-    }
-    
-    if(!valid_email($email)){
-    echo "Invalid email address.";
-    }
-    
  

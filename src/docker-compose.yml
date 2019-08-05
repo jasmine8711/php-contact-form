@@ -9,6 +9,7 @@ services:
       - backend
     volumes:
       - ${PWD}/public_html/:/var/www/html/
+    env_file: .phpenv
     container_name: php
   apache:
     build:
