@@ -1,39 +1,39 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h1>Contact Us</h1>
-<div class="error">
-
-</div>
-<form method="post" action="">
-<?php include "includes/signup.inc.php"
-?>
-
-<h4>Fullname:</h4>
-<input type="text" name="fullname" value="" >
-<br>
-<h4>*Email:</h4>
-<input type="text" name="email" value="" placeholder ="Mail@gmail.com">
-<br>
-<h4>Your message:</h4>
-<textarea name="comment" rows="5" cols="40"></textarea>
-<br>
-<br>
-<div>
 <?php
-echo $emailErr;
-?>
+      include "includes/signup.inc.php"
+      ?> 
+  <head><title>Contact Form</title></head>
+  <link rel="stylesheet" href="styles.css">
+
+
+<div class="app">
+<form ng-submit='addMessage' class="form" action="<?=$_SERVER['PHP_SELF'];?>" method='post'>>
+		<h1 class="app-info">Contact Us</h1>
+		<div class="user_field">
+			<div class="row _1" style="--index: 0">
+				<div class="textfield">
+					<input type="text" class="text-input" name="name">
+					<span class="fieldinfo">Name</span>
+				</div>
+				<div class="textfield">
+					<input type="email" class="text-input" name="email">
+					<span class="fieldinfo">Email</span>
+				</div>
+			</div>
+			<div class="row _3" style="--index: 2">
+				<div class="textfield">
+					<textarea class="text-input" placeholder="Type your message here."></textarea>
+				</div>
+			</div>
+      <div class="error">
+   <?=$email_error?>
+   <?=$comment_error?> 
+   </div>
+			<div class="row _4" style="--index: 3">
+				<button class="submit btn" type="submit">Submit</button>
+			</div>
+		</div>
+	</form>
 </div>
-<button type="submit" name="Submit">SEND</button>
 
-</form>
 
-</body>
-</html>
 
