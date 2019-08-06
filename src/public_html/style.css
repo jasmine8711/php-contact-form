@@ -1,41 +1,18 @@
-:root {
-  --time: 1500ms;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-*:focus {
-  outline: none;
-}
-
-*::-webkit-input-placeholder {
-  color: #222;
-}
-
-*::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #222;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 body {
   width: 100%;
   height: 100vh;
   background: #e4e4e4;
-  font-family: montserrat;
+  font-family: "Montserrat", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #2c3e50;
   overflow: hidden;
 }
@@ -48,42 +25,31 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background: #fff;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin: 20px;
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
   -webkit-transform: scale(0.9);
-  transform: scale(0.9);
+          transform: scale(0.9);
 }
 
-.app::before,
-.app::after {
+.app::before, .app::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 400px;
   height: 800px;
-  background-image: radial-gradient(
-    circle 248px at center,
-    #16d9e3 0%,
-    #30c7ec 47%,
-    #46aef7 100%
-  );
+  background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
   opacity: 0.6;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   -webkit-animation: slide-in var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  animation: slide-in var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
+          animation: slide-in var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
 .app::before {
@@ -97,19 +63,19 @@ body {
   left: -200px;
   top: -150px;
   -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 @-webkit-keyframes slide-in {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 0.6;
     -webkit-transform: translateX(0%) rotate(-15deg);
-    transform: translateX(0%) rotate(-15deg);
+            transform: translateX(0%) rotate(-15deg);
   }
 }
 
@@ -117,12 +83,12 @@ body {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 0.6;
     -webkit-transform: translateX(0%) rotate(-15deg);
-    transform: translateX(0%) rotate(-15deg);
+            transform: translateX(0%) rotate(-15deg);
   }
 }
 
@@ -133,29 +99,19 @@ form.form {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 100px 1fr;
-  grid-template-rows: 100px 1fr;
+      grid-template-rows: 100px 1fr;
   padding: 10px 20px;
   z-index: 10;
-  -webkit-animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  opacity: 0;
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms;
 }
 
 form.form h1.app-info {
-  font-weight: 800;
   font-size: 2rem;
-  text-align: center;
+  margin: 25px 0;
   color: rgba(0, 0, 0, 0.8);
-  -webkit-animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms;
 }
 
 form.form .user_field {
-  padding-top: 100px;
+  padding-top: 30px;
 }
 
 form.form .user_field .row {
@@ -163,13 +119,13 @@ form.form .user_field .row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
   color: rgba(0, 0, 0, 0.8);
   -webkit-animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
-  animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
+          animation: slide-up var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
   -webkit-animation-delay: calc(400ms + (200ms * (var(--index))));
-  animation-delay: calc(400ms + (200ms * (var(--index))));
+          animation-delay: calc(400ms + (200ms * (var(--index))));
 }
 
 form.form .user_field .row .textfield {
@@ -182,7 +138,7 @@ form.form .user_field .row .textfield input {
   color: #000;
   border: none;
   border-bottom: 2px solid #222;
-  padding: 5px;
+  padding: 8px;
   letter-spacing: 1px;
 }
 
@@ -190,16 +146,7 @@ form.form .user_field .row .textfield input[type="number"] {
   -moz-appearance: textfield;
 }
 
-form.form
-  .user_field
-  .row
-  .textfield
-  input[type="number"]::-webkit-inner-spin-button,
-form.form
-  .user_field
-  .row
-  .textfield
-  input[type="number"]::-webkit-outer-spin-button {
+form.form .user_field .row .textfield input[type="number"]::-webkit-inner-spin-button, form.form .user_field .row .textfield input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -210,22 +157,22 @@ form.form .user_field .row .textfield input:not(:valid) {
 
 form.form .user_field .row .textfield input:focus ~ .fieldinfo {
   font-size: 12px;
-  top: -12%;
+  top: -25%;
   color: #27ae60;
 }
 
 form.form .user_field .row .textfield input.hasvalue ~ .fieldinfo {
   font-size: 12px;
-  top: -12%;
+  top: -25%;
   color: #27ae60;
 }
 
 form.form .user_field .row .textfield .fieldinfo {
   position: absolute;
   left: 5px;
-  top: 48%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   pointer-events: none;
   font-weight: 800;
   font-size: 14px;
@@ -235,13 +182,13 @@ form.form .user_field .row .textfield .fieldinfo {
 }
 
 form.form .user_field .row._4 {
-  height: 60px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 form.form .user_field .row._4 .btn.submit {
@@ -254,8 +201,8 @@ form.form .user_field .row._4 .btn.submit {
   font-size: 18px;
   cursor: pointer;
   -webkit-box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
-  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
-  margin: 0 50px;
+          box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
+  margin: 0 40px;
 }
 
 form.form .user_field .row._3 {
@@ -282,66 +229,7 @@ form.form .user_field .row._3 .textfield textarea {
   border-bottom: 2px solid #222;
 }
 
-@-webkit-keyframes slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  .app {
-    width: 600px;
-    height: 550px;
-    position: fixed;
-    left: 0;
-    top: 10%;
-    margin: 0 20px;
-  }
-}
-
-.support {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-a {
-  margin: 0 10px;
-  color: #fff;
-  font-size: 2rem;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
-}
-
-a:hover {
-  color: #222;
-}
-/*# sourceMappingURL=styles.css.map */
 .error {
-  color: rgb(141, 29, 29);
-  font-size: 20px;
+  color: #cc2e2e;
 }
+/*# sourceMappingURL=style.css.map */

@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 
     if(empty($_POST["phone"])){
-        $phone_error = "PHone is required";
+        $phone_error = "Phone is required";
     } else {
         $phone = test_input($_POST["phone"]);
         if(!preg_match("/^[0-9]*$/",$phone)){
@@ -40,15 +40,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     }
  
     if(empty($_POST["city"])){
-        $comment_error = "please fill your city!";
+        $city_error = "Please fill your city!";
     } else{
         $city = test_input($_POST["city"]);
+        $city_error = "";
+
     }
 
     if(empty($_POST["comment"])){
         $comment_error = "please fill your message!";
     } else{
         $comment = test_input($_POST["comment"]);
+        $comment_error ="";
     }
 
     if($name_error == ''and $email_error =='' and $phone_error == '' and $city_error == ''){
@@ -87,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
         
             $mail->send();
-            $success= 'Message has been sent';
+            $success= 'Message send!';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
@@ -102,3 +105,6 @@ function test_input($data){
     $data = htmlspecialchars($data);
     return $data;
 }
+$page = $_SERVER['PHP_SELF'];
+$sec = "3";
+header("Refresh: $sec; url=$page");
