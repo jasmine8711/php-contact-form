@@ -2,7 +2,7 @@
 ### Contact form
 ![contact form](1.png "from")
 ### Error message
-![contact form](1.png "error")
+![contact form](2.png "error")
 
 
 This a contact form using php as backend language.
