@@ -106,5 +106,5 @@ function test_input($data){
     return $data;
 }
 $page = $_SERVER['PHP_SELF'];
-$sec = "3";
+$sec = "9";
 header("Refresh: $sec; url=$page");
